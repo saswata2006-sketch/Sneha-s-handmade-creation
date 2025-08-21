@@ -1,115 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sneha's Creation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sneha's Creation | Handmade & Oxidised Jewellery</title>
+
+  <!-- Google Fonts (handwritten title + elegant body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fffaf7;
-      color: #333;
-      text-align: center;
+    :root{
+      --maroon:#7a1f1f;        /* deep Bengali red (alta/sindoor vibe) */
+      --crimson:#a83232;
+      --gold:#f6d743;          /* haldi / festive gold */
+      --cream:#fff8f0;         /* dhuti/sari off-white */
+      --ink:#2b2b2b;
     }
-    header {
-      background: #f8d7da;
-      padding: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(to bottom,var(--cream),#fff3e6);color:var(--ink);}
+    body{font-family:"Libre Baskerville",serif; line-height:1.5;}
+
+    /* Top ribbon with subtle alpana-style border */
+    .ribbon{
+      height:10px;
+      background:
+        repeating-linear-gradient(90deg, var(--gold) 0 18px, transparent 18px 36px),
+        linear-gradient(var(--gold),var(--gold));
+      background-blend-mode:multiply;
+      border-bottom:6px double var(--gold);
     }
-    header img {
-      height: 60px;
-      margin-right: 15px;
+
+    header{
+      background: linear-gradient(90deg, var(--crimson), #e63946);
+      color:#fff;
+      display:flex; align-items:center; justify-content:center;
+      padding:18px 14px; gap:14px;
+      box-shadow:0 6px 16px rgba(0,0,0,.18);
+      position:sticky; top:0; z-index:10;
     }
-    header h1 {
-      font-size: 28px;
-      margin: 0;
-      color: #a8324c;
+    header .logo{
+      height:68px; width:auto; border-radius:12px;
+      background:#fff; border:3px solid var(--gold); padding:4px;
     }
-    section {
-      padding: 40px 20px;
+    header h1{
+      margin:0; font-family:"Great Vibes",cursive; font-size:42px; letter-spacing:.5px;
+      color:#fff6c9; text-shadow:2px 2px 0 rgba(122,31,31,.7);
     }
-    h2 {
-      color: #a8324c;
-      margin-bottom: 20px;
+    header .tag{
+      display:block; font-size:13px; font-weight:700; letter-spacing:.4px; margin-top:2px;
+      color:#ffeaa7;
     }
-    .products {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
+
+    nav{
+      background:#221414; color:#fff; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;
+      border-bottom:4px double var(--gold);
     }
-    .product {
-      background: #fff;
-      border: 2px solid #f8d7da;
-      border-radius: 10px;
-      padding: 20px;
-      width: 250px;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    nav a{
+      color:#fff; text-decoration:none; padding:10px 14px; font-size:14px; font-weight:700;
+      border-bottom:2px solid transparent;
     }
-    .product img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 10px;
+    nav a:hover{border-color:var(--gold); color:#ffeaa7;}
+
+    .container{max-width:1080px; margin:0 auto; padding:28px 16px;}
+
+    .hero{
+      background:#fffdf7; border:3px solid var(--gold); border-radius:16px;
+      padding:22px; text-align:center; margin-top:18px;
+      box-shadow:0 8px 20px rgba(0,0,0,.08);
     }
-    .contact {
-      background: #fce4ec;
-      padding: 40px 20px;
-      border-top: 3px solid #a8324c;
+    .hero h2{
+      margin:0 0 8px; color:var(--maroon); font-size:24px;
     }
-    footer {
-      background: #a8324c;
-      color: white;
-      padding: 10px;
-      margin-top: 20px;
+    .hero p{margin:6px 0 0;}
+    .bn{
+      font-weight:700; color:var(--crimson);
+    }
+
+    .section-title{
+      text-align:center; margin:40px 0 20px;
+      font-size:24px; color:var(--crimson);
+      display:inline-block; border-bottom:3px solid var(--gold); padding-bottom:6px;
+    }
+
+    .grid{
+      display:grid; gap:22px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card{
+      background:#fff; border:3px solid var(--gold); border-radius:14px; overflow:hidden;
+      box-shadow:0 6px 16px rgba(0,0,0,.1); transition:transform .25s ease, box-shadow .25s ease;
+    }
+    .card:hover{ transform:translateY(-4px); box-shadow:0 10px 24px rgba(0,0,0,.14);}
+    .card img{width:100%; height:210px; object-fit:cover; border-bottom:2px solid var(--crimson);}
+    .card .body{padding:14px;}
+    .card h3{margin:6px 0 8px; color:var(--maroon); font-size:18px;}
+    .card p{margin:0 0 14px; color:#444; font-size:14px;}
+    .btnrow{display:flex; gap:10px; flex-wrap:wrap}
+    .btn{
+      display:inline-block; text-decoration:none; font-weight:700; font-size:13px;
+      padding:10px 12px; border-radius:8px; border:2px solid var(--crimson);
+    }
+    .btn.primary{background:var(--crimson); color:#fff; border-color:var(--crimson);}
+    .btn.primary:hover{filter:brightness(1.05)}
+    .btn.ghost{background:#fff; color:var(--crimson);}
+    .btn.ghost:hover{background:#fff3f3}
+
+    .contact{
+      margin-top:44px; background:#fffdf0; border:3px solid var(--gold); border-radius:16px; padding:22px;
+    }
+    .contact .rows{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-top:10px;}
+    .contact a{color:var(--crimson); text-decoration:none; font-weight:700}
+    .contact a:hover{text-decoration:underline}
+
+    footer{
+      margin-top:30px; background:var(--maroon); color:#fff; text-align:center;
+      padding:16px; border-top:4px solid var(--gold);
+      font-size:13px;
+    }
+
+    /* Small utility badges */
+    .badge{
+      display:inline-block; margin:0 6px 10px; padding:6px 10px; font-size:12px; font-weight:700;
+      background:#fff5b3; border:2px solid var(--gold); border-radius:999px; color:#7a4a00;
     }
   </style>
 </head>
 <body>
+
+  <div class="ribbon"></div>
+
   <!-- Header -->
   <header>
-    <img src="logo.jpg" alt="Sneha's Creation Logo">
-    <h1>Sneha's Creation</h1>
+    <!-- Your logo file must be named logo.jpg and uploaded to the repo root -->
+    <img class="logo" src="logo.jpg" alt="Sneha's Creation Logo">
+    <div>
+      <h1>Sneha's Creation</h1>
+      <span class="tag">Handmade Jewellery • Bengali Traditional Touch</span>
+    </div>
   </header>
 
-  <!-- Products Section -->
-  <section>
-    <h2>Our Products</h2>
-    <div class="products">
-      <div class="product">
-        <img src="saree.jpg" alt="Handpainted Saree">
-        <h3>Handpainted Saree</h3>
-        <p>Beautifully crafted sarees with Bengali tradition.</p>
-      </div>
-      <div class="product">
-        <img src="kurti.jpg" alt="Punjabi Kurti">
-        <h3>Panjabi Kurti</h3>
-        <p>Authentic handpainted kurtis with elegant design.</p>
-      </div>
-      <div class="product">
-        <img src="dupatta.jpg" alt="Handmade Dupatta">
-        <h3>Handmade Dupatta</h3>
-        <p>Exclusive dupattas painted with love & creativity.</p>
-      </div>
-    </div>
-  </section>
+  <!-- Navigation -->
+  <nav aria-label="Primary">
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.instagram.com/meghbristi_handcraft?igsh=MTAxODVkcWtjbnR3Mw==" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://wa.me/919434300365" target="_blank" rel="noopener">WhatsApp</a>
+  </nav>
 
-  <!-- Contact Section -->
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p><b>Phone:</b> +91-9876543210</p>
-    <p><b>Email:</b> snehascreation@gmail.com</p>
-    <p><b>Address:</b> Kolkata, West Bengal, India</p>
-  </section>
+  <main class="container">
+    <!-- Hero / About -->
+    <section class="hero" aria-labelledby="about">
+      <h2 id="about">About Sneha's Creation</h2>
+      <p>Handmade jewellery ❤ crafted with love, inspired by Bengali heritage.</p>
+      <p class="bn">বাংলার ঐতিহ্যের ছোঁয়ায় হাতে বানানো গয়না।</p>
+      <div style="margin-top:10px;">
+        <span class="badge">Handmade</span>
+        <span class="badge">Bengali Tradition</span>
+        <span class="badge">Small Business</span>
+      </div>
+    </section>
 
-  <!-- Footer -->
+    <!-- Products -->
+    <section id="products" aria-labelledby="protitle">
+      <h2 id="protitle" class="section-title">Our Products</h2>
+
+      <div class="grid">
+        <!-- Category 1 -->
+        <article class="card">
+          <img src="handmade-jewellery.jpg" alt="Handmade Jewellery category preview">
+          <div class="body">
+            <h3>Handmade Jewellery</h3>
+            <p>Unique, artisanal pieces—perfect for everyday and festive looks.</p>
+            <div class="btnrow">
+              <a class="btn primary" href="https://wa.me/919434300365?text=Hi%20Sneha!%20I%20want%20to%20see%20Handmade%20Jewellery%20collection." target="_blank" rel="noopener">Order on WhatsApp</a>
+              <a class="btn ghost" href="https://www.instagram.com/meghbristi_handcraft?igsh=MTAxODVkcWtjbnR3Mw==" target="_blank" rel="noopener">View on Instagram</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Category 2 -->
+        <article class="card">
+          <img src="oxidised-jewellery.jpg" alt="Oxidised Jewellery category preview">
+          <div class="body">
+            <h3>Oxidised Jewellery</h3>
+            <p>Classic oxidised sets with a bold, traditional Bengali feel.</p>
+            <div class="btnrow">
+              <a class="btn primary" href="https://wa.me/919434300365?text=Hi%20Sneha!%20I%20want%20to%20see%20Oxidised%20Jewellery%20collection." target="_blank" rel="noopener">Order on WhatsApp</a>
+              <a class="btn ghost" href="https://www.instagram.com/meghbristi_handcraft?igsh=MTAxODVkcWtjbnR3Mw==" target="_blank" rel="noopener">View on Instagram</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Category 3 -->
+        <article class="card">
+          <img src="printed-punjabi.jpg" alt="Printed Punjabi category preview">
+          <div class="body">
+            <h3>Printed Punjabi</h3>
+            <p>Comfortable, handcrafted prints with festive charm.</p>
+            <div class="btnrow">
+              <a class="btn primary" href="https://wa.me/919434300365?text=Hi%20Sneha!%20I%20want%20to%20see%20Printed%20Punjabi%20collection." target="_blank" rel="noopener">Order on WhatsApp</a>
+              <a class="btn ghost" href="https://www.instagram.com/meghbristi_handcraft?igsh=MTAxODVkcWtjbnR3Mw==" target="_blank" rel="noopener">View on Instagram</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact" aria-labelledby="contacttitle">
+      <h2 id="contacttitle">Contact</h2>
+      <div class="rows">
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/919434300365" target="_blank" rel="noopener">+91 94343 00365</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/meghbristi_handcraft?igsh=MTAxODVkcWtjbnR3Mw==" target="_blank" rel="noopener">@meghbristi_handcraft</a></p>
+        <p><strong>Location:</strong> Kolkata, West Bengal</p>
+      </div>
+      <p style="margin-top:8px; font-size:13px;">Business hours: 10:00–20:00 IST • Cash on Delivery (ask on WhatsApp)</p>
+    </section>
+  </main>
+
   <footer>
-    <p>© 2025 Sneha's Creation. All rights reserved.</p>
+    © 2025 Sneha's Creation • Designed with ❤
   </footer>
 </body>
 </html>
