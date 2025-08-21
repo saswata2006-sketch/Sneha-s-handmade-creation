@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sneha's Creation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      color: #333;
+    }
+    header {
+      background: #b22222;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header img {
+      max-width: 120px;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-family: 'Georgia', serif;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.8rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #f4d03f;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .about, .contact {
+      margin-bottom: 3rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .product {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+    .product img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .product h3 {
+      margin: 0.5rem 0;
+    }
+    .product p {
+      margin: 0;
+      color: #555;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      background: #b22222;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #7d1414;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Sneha's Creation Logo">
+    <h1>Sneha's Creation</h1>
+    <p>Authentic Bengali Handmade Jewellery ❤</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <p>
+        Sneha's Creation brings you elegant handmade jewellery, crafted with love and inspired by Bengali tradition. Each piece reflects our rich heritage, combining cultural beauty with modern style.
+      </p>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <div class="product">
+        <img src="https://via.placeholder.com/300x250" alt="Necklace">
+        <h3>Bengali Style Necklace</h3>
+        <p>₹999</p>
+        <a href="https://wa.me/919434300365" class="btn">Order on WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x250" alt="Earrings">
+        <h3>Traditional Earrings</h3>
+        <p>₹499</p>
+        <a href="https://wa.me/919434300365" class="btn">Order on WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x250" alt="Bangles">
+        <h3>Colorful Bangles</h3>
+        <p>₹699</p>
+        <a href="https://wa.me/919434300365" class="btn">Order on WhatsApp</a>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>📍 Bankura, India</p>
+      <p>📞 +91 94343 00365</p>
+      <p>📧 snehascreation@gmail.com</p>
+      <p>Follow us on <a href="https://www.instagram.com/meghbristi_handcraft?igsh=MTAxODVkcWtjbnR3Mw==" target="_blank">Instagram</a></p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Sneha's Creation | Designed with ❤ by Saswata</p>
+  </footer>
+
+</body>
+</html>
