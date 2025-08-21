@@ -1,121 +1,115 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meghbristi Handcraft</title>
+  <title>Sneha's Creation</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fefcf9;
+      background: #fffaf7;
       color: #333;
+      text-align: center;
     }
     header {
-      text-align: center;
-      background: #fff3e6;
-      padding: 20px;
-      border-bottom: 2px solid #e2d3c1;
+      background: #f8d7da;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     header img {
-      max-width: 220px;
-      border-radius: 12px;
+      height: 60px;
+      margin-right: 15px;
     }
-    h1 {
-      margin: 10px 0 0 0;
-      font-size: 26px;
-      color: #8b0000;
+    header h1 {
+      font-size: 28px;
+      margin: 0;
+      color: #a8324c;
     }
-    .tagline {
-      font-size: 14px;
-      color: #444;
+    section {
+      padding: 40px 20px;
     }
-    main {
-      padding: 30px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .section-title {
-      font-size: 22px;
-      margin-bottom: 15px;
-      text-align: center;
-      color: #8b0000;
+    h2 {
+      color: #a8324c;
+      margin-bottom: 20px;
     }
     .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
       gap: 20px;
     }
     .product {
-      border: 1px solid #ddd;
-      border-radius: 10px;
       background: #fff;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border: 2px solid #f8d7da;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
     }
     .product img {
-      max-width: 100%;
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
       border-radius: 8px;
+      margin-bottom: 10px;
     }
-    .product h3 {
-      margin: 10px 0 5px;
-      font-size: 18px;
-    }
-    .product p {
-      font-size: 14px;
-      color: #555;
+    .contact {
+      background: #fce4ec;
+      padding: 40px 20px;
+      border-top: 3px solid #a8324c;
     }
     footer {
-      text-align: center;
-      padding: 15px;
-      background: #fff3e6;
-      border-top: 2px solid #e2d3c1;
-      margin-top: 30px;
-      font-size: 14px;
+      background: #a8324c;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-
+  <!-- Header -->
   <header>
-    <!-- 👇 eta holo logo image -->
-    <img src="logo.jpg" alt="Meghbristi Handcraft Logo">
-    <h1>Meghbristi Handcraft</h1>
-    <p class="tagline">Authentic Bengali Artisanal Creations</p>
+    <img src="logo.jpg" alt="Sneha's Creation Logo">
+    <h1>Sneha's Creation</h1>
   </header>
 
-  <main>
-    <h2 class="section-title">Our Products</h2>
+  <!-- Products Section -->
+  <section>
+    <h2>Our Products</h2>
     <div class="products">
-      <!-- Product 1 -->
       <div class="product">
-        <img src="product1.jpg" alt="Handpainted Saree">
+        <img src="saree.jpg" alt="Handpainted Saree">
         <h3>Handpainted Saree</h3>
-        <p>Beautifully crafted saree with traditional Bengali designs.</p>
+        <p>Beautifully crafted sarees with Bengali tradition.</p>
       </div>
-
-      <!-- Product 2 -->
       <div class="product">
-        <img src="product2.jpg" alt="Punjabi Kurta">
-        <h3>Panjabi Kurta</h3>
-        <p>Authentic hand-painted kurta with vibrant colors.</p>
+        <img src="kurti.jpg" alt="Punjabi Kurti">
+        <h3>Panjabi Kurti</h3>
+        <p>Authentic handpainted kurtis with elegant design.</p>
       </div>
-
-      <!-- Product 3 -->
       <div class="product">
-        <img src="product3.jpg" alt="Handmade Dupatta">
+        <img src="dupatta.jpg" alt="Handmade Dupatta">
         <h3>Handmade Dupatta</h3>
-        <p>Elegant dupatta designed with heritage-inspired patterns.</p>
+        <p>Exclusive dupattas painted with love & creativity.</p>
       </div>
     </div>
-  </main>
+  </section>
 
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p><b>Phone:</b> +91-9876543210</p>
+    <p><b>Email:</b> snehascreation@gmail.com</p>
+    <p><b>Address:</b> Kolkata, West Bengal, India</p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    © 2025 Meghbristi Handcraft. All rights reserved.
+    <p>© 2025 Sneha's Creation. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
-
