@@ -89,7 +89,8 @@
     .card:hover{ transform:translateY(-4px); box-shadow:0 10px 24px rgba(0,0,0,.14);}
     .card img{width:100%; height:210px; object-fit:cover; border-bottom:2px solid var(--crimson);}
     .card .body{padding:14px;}
-    .card h3{margin:6px 0 8px; color:var(--maroon); font-size:18px;}
+    .card h3{margin:6px 0 8px; color:var(--maroon); font-size:18px; cursor:pointer;}
+    .card h3:hover{color:var(--crimson);}
     .card p{margin:0 0 14px; color:#444; font-size:14px;}
     .btnrow{display:flex; gap:10px; flex-wrap:wrap}
     .btn{
@@ -153,14 +154,14 @@
     <section id="products" aria-labelledby="protitle">
       <h2 id="protitle" class="section-title">Our Products</h2>
       <div id="product-grid" class="grid">
-        <!-- Products will be injected here dynamically -->
+        <!-- Products will be injected dynamically -->
       </div>
     </section>
 
     <section id="contact" class="contact" aria-labelledby="contacttitle">
       <h2 id="contacttitle">Contact</h2>
       <div class="rows">
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/919434300365" target="_blank" rel="noopener">+91 94343 00365</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/919434300365" target="_blank" rel="noopener">+91 9434300365</a></p>
         <p><strong>Instagram:</strong> <a href="https://www.instagram.com/meghbristi_handcraft?igsh=MTAxODVkcWtjbnR3Mw==" target="_blank" rel="noopener">@meghbristi_handcraft</a></p>
         <p><strong>Location:</strong> Bankura, West Bengal</p>
       </div>
@@ -173,7 +174,6 @@
   </footer>
 
   <script>
-    // Array of categories with multiple products
     const categories = [
       {
         name: "Handmade Jewellery",
@@ -210,7 +210,6 @@
     const grid = document.getElementById("product-grid");
 
     categories.forEach(cat=>{
-      // Main category card
       const card = document.createElement("article");
       card.className = "card";
 
@@ -219,17 +218,17 @@
         <div class="body">
           <h3>${cat.name}</h3>
           <p>${cat.desc}</p>
+          <div class="sub-products" style="display:none; margin-top:10px;"></div>
         </div>
       `;
 
-      // Sub-products inside main card
-      const body = card.querySelector(".body");
+      const subProductsDiv = card.querySelector(".sub-products");
       const subGrid = document.createElement("div");
       subGrid.className = "grid";
+
       cat.products.forEach(p=>{
         const pCard = document.createElement("div");
         pCard.className = "card";
-        pCard.style.marginTop="10px";
         pCard.innerHTML = `
           <img src="${p.img}" alt="${p.name}">
           <div class="body">
@@ -243,7 +242,14 @@
         subGrid.appendChild(pCard);
       });
 
-      body.appendChild(subGrid);
+      subProductsDiv.appendChild(subGrid);
+
+      // Toggle products on category click
+      const title = card.querySelector("h3");
+      title.addEventListener("click", ()=>{
+        subProductsDiv.style.display = subProductsDiv.style.display === "none" ? "grid" : "none";
+      });
+
       grid.appendChild(card);
     });
   </script>
